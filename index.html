@@ -584,6 +584,11 @@
       background: #e7e5df;
     }
 
+    .sample.screenshot img {
+      object-fit: contain;
+      background: #f5f3ef;
+    }
+
     .sample-preview {
       display: grid;
       align-content: center;
@@ -605,45 +610,6 @@
       background:
         linear-gradient(120deg, rgba(255, 255, 255, .94), rgba(236, 250, 241, .86)),
         linear-gradient(135deg, #e9f8ef, #ffffff);
-    }
-
-    .sample-preview.medical-web {
-      color: #103634;
-      background:
-        linear-gradient(120deg, rgba(255, 255, 255, .94), rgba(226, 246, 242, .88)),
-        linear-gradient(135deg, #f7fffb, #cbeee7);
-    }
-
-    .sample-preview.bracelet {
-      color: #2f2607;
-      background:
-        linear-gradient(120deg, rgba(255, 250, 224, .92), rgba(248, 211, 65, .82)),
-        linear-gradient(135deg, #fff8d3, #f2bd2a);
-    }
-
-    .sample-preview.pet-plan {
-      background:
-        linear-gradient(120deg, rgba(9, 12, 50, .96), rgba(25, 30, 84, .86)),
-        linear-gradient(135deg, #05072f, #263a86);
-    }
-
-    .sample-preview.lottery-system {
-      background:
-        linear-gradient(120deg, rgba(77, 69, 190, .95), rgba(156, 76, 198, .82)),
-        linear-gradient(135deg, #465bd4, #b346b8);
-    }
-
-    .sample-preview.senior-salon {
-      background:
-        linear-gradient(120deg, rgba(65, 69, 76, .96), rgba(119, 92, 69, .82)),
-        linear-gradient(135deg, #2a3036, #846a52);
-    }
-
-    .sample-preview.reservation-plan {
-      color: #351b12;
-      background:
-        linear-gradient(120deg, rgba(255, 255, 255, .92), rgba(255, 229, 207, .84)),
-        linear-gradient(135deg, #fff7ed, #f3975f);
     }
 
     .preview-kicker {
@@ -1027,60 +993,36 @@
               </div>
               <div class="sample-caption"><b>AI LINE botサービス</b><span>LINE送信からSNS投稿までを支援するAIサービスのサンプル</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview medical-web" role="img" aria-label="医療系WEBアプリのサンプル">
-                <span class="preview-kicker">Medical Web App</span>
-                <strong>医療系WEBアプリ</strong>
-                <span>検索UI / 地域情報 / 受診先案内</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/27-medical-web-app.jpg" alt="医療系WEBアプリのサンプル">
               <div class="sample-caption"><b>医療系WEBアプリ</b><span>症状や地域情報をもとに受診先を探すWebアプリ構想</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview lottery-system" role="img" aria-label="第三者公平抽選機関システム計画のサンプル">
-                <span class="preview-kicker">Fair Lottery System</span>
-                <strong>第三者公平抽選機関</strong>
-                <span>公平抽選 / 証跡管理 / 参加管理</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/25-lottery-system.jpg" alt="第三者公平抽選機関システム計画のサンプル">
               <div class="sample-caption"><b>第三者公平抽選機関システム計画</b><span>抽選の公平性、記録、運用体制を含めたシステム計画</span></div>
             </article>
-            <article class="sample">
-              <img src="assets/22-store-digital-decoration.jpg" alt="店内デジタル装飾のサンプル">
+            <article class="sample screenshot wide">
+              <img src="assets/31-store-digital-decoration-screenshot.jpg" alt="店内デジタル装飾のサンプル">
               <div class="sample-caption"><b>店内デジタル装飾</b><span>店舗空間、照明、映像表示を組み合わせた装飾提案</span></div>
             </article>
-            <article class="sample">
-              <img src="assets/23-bigboss-stamp.jpg" alt="BIGBOSSスタンプのサンプル">
+            <article class="sample screenshot tall">
+              <img src="assets/28-bigboss-stamp-screenshot.jpg" alt="BIGBOSSスタンプのサンプル">
               <div class="sample-caption"><b>BIGBOSSスタンプ</b><span>人物IP、スタンプ機構、販促演出を組み合わせた企画</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview bracelet" role="img" aria-label="子供用ブレスレット企画開発量産のサンプル">
-                <span class="preview-kicker">Product Planning</span>
-                <strong>子供用ブレスレット</strong>
-                <span>企画 / デザイン / 開発 / 量産</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/30-bracelet-plan.jpg" alt="子供用ブレスレット企画開発量産のサンプル">
               <div class="sample-caption"><b>子供用ブレスレット企画開発量産</b><span>子供向け玩具アクセサリーの企画、仕様設計、量産視点</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview pet-plan" role="img" aria-label="高級PETホテル事業計画のサンプル">
-                <span class="preview-kicker">Business Plan</span>
-                <strong>高級PETホテル</strong>
-                <span>市場分析 / サービス設計 / 収支計画</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/26-pet-hotel-plan.jpg" alt="高級PETホテル事業計画のサンプル">
               <div class="sample-caption"><b>高級PETホテル事業計画</b><span>高付加価値型ペットホテルの事業モデル、導線、収益設計</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview senior-salon" role="img" aria-label="高級老人サロン事業計画のサンプル">
-                <span class="preview-kicker">Senior Salon</span>
-                <strong>高級老人サロン</strong>
-                <span>送迎 / 健康管理 / 会員制サービス</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/29-senior-salon-plan.jpg" alt="高級老人サロン事業計画のサンプル">
               <div class="sample-caption"><b>高級老人サロン事業計画</b><span>高齢者向け会員制サロンのサービス設計と運営計画</span></div>
             </article>
-            <article class="sample">
-              <div class="sample-preview reservation-plan" role="img" aria-label="特上予約事業計画のサンプル">
-                <span class="preview-kicker">Reservation Service</span>
-                <strong>特上予約</strong>
-                <span>電話予約 / オペレーション / 予約管理</span>
-              </div>
+            <article class="sample screenshot wide">
+              <img src="assets/24-reservation-service.jpg" alt="特上予約事業計画のサンプル">
               <div class="sample-caption"><b>特上予約事業計画</b><span>電話・Web予約を組み合わせた予約代行、管理サービスの計画</span></div>
             </article>
             <article class="sample">
