@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>大塚理沙 紹介資料</title>
+  <style>
+    :root {
+      --ink: #222222;
+      --muted: #666b73;
+      --line: #d9d9d2;
+      --paper: #f7f6f2;
+      --panel: #ffffff;
+      --soft: #efede6;
+      --accent: #7a6543;
+      --blue: #2f6d8c;
+      --green: #55765b;
+      --red: #8d4e4e;
+      --shadow: 0 10px 30px rgba(30, 27, 22, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 246, 242, .92);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      width: min(1080px, calc(100% - 36px));
+      min-height: 62px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a,
+    .print-button {
+      min-height: 36px;
+      padding: 7px 11px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav a:hover,
+    .print-button:hover {
+      color: var(--ink);
+      border-color: var(--line);
+      background: #fff;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .intro {
+      padding: clamp(34px, 6vw, 58px) 0 32px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: clamp(22px, 5vw, 44px);
+      align-items: end;
+    }
+
+    .label {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 16px;
+      font-size: clamp(25px, 3.6vw, 34px);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .intro-copy {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: #3f4145;
+      font-size: clamp(15px, 1.8vw, 17px);
+      font-weight: 500;
+    }
+
+    .intro-note {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+      padding: 18px;
+    }
+
+    .intro-note h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .intro-note p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: clamp(44px, 7vw, 78px) 0;
+    }
+
+    .section + .section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(24px, 3.4vw, 32px);
+      line-height: 1.25;
+      font-weight: 720;
+    }
+
+    .lead {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .profile-image,
+    .panel,
+    .member,
+    .sample {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .profile-image img {
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+    }
+
+    .panel {
+      padding: clamp(22px, 4vw, 34px);
+    }
+
+    .profile-name {
+      margin-bottom: 12px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      font-weight: 850;
+    }
+
+    .profile-role {
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .panel p {
+      color: #43464b;
+      font-weight: 570;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .info-list li {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 14px;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .info-list b {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .info-list span {
+      font-weight: 650;
+    }
+
+    .relationship {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .map {
+      min-height: 520px;
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .2)),
+        url("assets/15-space-immersive-stage.jpg") center / cover no-repeat;
+      overflow: hidden;
+    }
+
+    .map::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(247, 246, 242, .82);
+    }
+
+    .map-line {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .map-line line {
+      stroke: rgba(60, 58, 52, .35);
+      stroke-width: 2;
+    }
+
+    .map-node {
+      position: absolute;
+      z-index: 2;
+      width: 178px;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 10px 22px rgba(30, 27, 22, .08);
+    }
+
+    .map-node.center {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 210px;
+      border-color: var(--accent);
+    }
+
+    .map-node.banno {
+      left: 24px;
+      top: 26px;
+    }
+
+    .map-node.nakamura {
+      right: 24px;
+      top: 58px;
+    }
+
+    .map-node.aoyagi {
+      left: 34px;
+      bottom: 42px;
+    }
+
+    .map-node.kiyota {
+      right: 34px;
+      bottom: 36px;
+    }
+
+    .map-node strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .map-node span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .members {
+      display: grid;
+      gap: 12px;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .person-card {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      min-height: 170px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .person-card.primary {
+      grid-column: 1 / -1;
+      min-height: 180px;
+      border-color: #c8b994;
+      background: linear-gradient(180deg, #fff, #fbfaf5);
+    }
+
+    .person-icon {
+      position: relative;
+      width: 62px;
+      height: 62px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--soft);
+    }
+
+    .person-icon::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 13px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+
+    .person-icon::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 12px;
+      width: 34px;
+      height: 20px;
+      border-radius: 18px 18px 10px 10px;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+
+    .person-card:nth-child(2) .person-icon::before,
+    .person-card:nth-child(2) .person-icon::after {
+      background: var(--blue);
+    }
+
+    .person-card:nth-child(3) .person-icon::before,
+    .person-card:nth-child(3) .person-icon::after {
+      background: var(--green);
+    }
+
+    .person-card:nth-child(4) .person-icon::before,
+    .person-card:nth-child(4) .person-icon::after {
+      background: var(--red);
+    }
+
+    .person-card:nth-child(5) .person-icon::before,
+    .person-card:nth-child(5) .person-icon::after {
+      background: #6a5a86;
+    }
+
+    .person-card:nth-child(6) .person-icon::before,
+    .person-card:nth-child(6) .person-icon::after {
+      background: #5f6d75;
+    }
+
+    .person-order {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .08em;
+    }
+
+    .person-card h3 {
+      margin-bottom: 5px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .person-role {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .person-card p {
+      margin-bottom: 0;
+      color: #42454a;
+      font-size: 14px;
+      font-weight: 580;
+    }
+
+    .member {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      min-height: 128px;
+    }
+
+    .member-index {
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--accent);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .member:nth-child(2) .member-index {
+      background: var(--blue);
+    }
+
+    .member:nth-child(3) .member-index {
+      background: var(--green);
+    }
+
+    .member:nth-child(4) .member-index {
+      background: var(--red);
+    }
+
+    .member-body {
+      padding: 18px 20px;
+    }
+
+    .member-body h3 {
+      margin-bottom: 4px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .member-title {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .member-body p {
+      margin-bottom: 0;
+      color: #42454a;
+      font-size: 14px;
+      font-weight: 580;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .skill {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .skill b {
+      display: block;
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+
+    .skill span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .samples {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .samples.flat {
+      margin-top: 0;
+    }
+
+    .sample img {
+      height: 190px;
+      object-fit: cover;
+      background: #e7e5df;
+    }
+
+    .sample.tall img {
+      height: 260px;
+    }
+
+    .sample.wide {
+      grid-column: span 2;
+    }
+
+    .sample.wide img {
+      height: 240px;
+    }
+
+    .sample-caption {
+      padding: 12px 13px 14px;
+    }
+
+    .sample-caption b {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .sample-caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border: 1px solid #dfd2b6;
+      border-radius: 8px;
+      background: #fff9ec;
+    }
+
+    .notice p {
+      margin-bottom: 0;
+      color: #67583d;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .footer {
+      padding: 26px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    @media (max-width: 900px) {
+      .header-inner,
+      .intro-grid,
+      .section-head,
+      .profile,
+      .relationship {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        padding: 12px 0;
+      }
+
+      .samples,
+      .skills,
+      .people-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .profile-image img {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .site-header {
+        position: static;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+
+      .profile-image img,
+      .sample img,
+      .sample.tall img,
+      .sample.wide img {
+        height: 220px;
+        min-height: 0;
+      }
+
+      .samples,
+      .skills,
+      .people-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .person-card.primary {
+        grid-column: auto;
+      }
+
+      .person-card {
+        grid-template-columns: 58px minmax(0, 1fr);
+        padding: 16px;
+      }
+
+      .person-icon {
+        width: 48px;
+        height: 48px;
+      }
+
+      .person-icon::before {
+        top: 10px;
+        width: 14px;
+        height: 14px;
+      }
+
+      .person-icon::after {
+        bottom: 9px;
+        width: 27px;
+        height: 16px;
+      }
+
+      .sample.wide {
+        grid-column: auto;
+      }
+
+      .info-list li {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .relationship {
+        gap: 22px;
+      }
+
+      .map {
+        display: grid;
+        gap: 10px;
+        min-height: auto;
+        padding: 14px;
+        background: var(--soft);
+      }
+
+      .map::before,
+      .map-line {
+        display: none;
+      }
+
+      .map-node,
+      .map-node.center,
+      .map-node.banno,
+      .map-node.nakamura,
+      .map-node.aoyagi,
+      .map-node.kiyota {
+        position: static;
+        transform: none;
+        width: 100%;
+      }
+
+      .map-node.center {
+        order: -1;
+      }
+
+      .member {
+        grid-template-columns: 64px minmax(0, 1fr);
+      }
+    }
+
+    @media print {
+      .site-header,
+      .print-button {
+        display: none;
+      }
+
+      body,
+      .intro,
+      .footer {
+        background: #fff;
+      }
+
+      .section,
+      .intro {
+        padding: 24px 0;
+      }
+
+      .profile-image,
+      .panel,
+      .member,
+      .sample,
+      .skill {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <small>紹介資料</small>
+        大塚理沙 紹介資料
+      </a>
+      <nav class="nav" aria-label="ページ内メニュー">
+        <a href="#people">人の紹介</a>
+        <a href="#samples">実績サンプル例</a>
+        <button class="print-button" type="button" onclick="window.print()">印刷</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="label">資料の目的</p>
+          <h1>大塚理沙と協業メンバーの紹介</h1>
+          <p class="intro-copy">
+            大塚理沙の経歴、協業メンバー、これまで関わってきた経験サンプルを簡潔にまとめた紹介資料です。
+          </p>
+        </div>
+        <aside class="intro-note">
+          <h2>構成</h2>
+          <p>
+            人の紹介と実績サンプル例の2つに分けて整理しています。
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="people">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="label">人の紹介</p>
+            <h2>人の紹介</h2>
+          </div>
+          <p class="lead">
+            大塚理沙を中心とした主な協業メンバーです。
+          </p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card primary">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">01</span>
+              <h3>大塚理沙</h3>
+              <div class="person-role">プロデューサー / ディレクター</div>
+              <p>
+                旧ジャニーズ事務所でのIT広報、株式会社ビー・クリエイティブでの遊技機開発・事業プロデュース会社のディレクター経験を持つ。
+                現在は、AI広告代理店、エンタメプロデュース、商品企画・開発支援などを軸に、新会社設立または共同事業化を視野に入れている。
+              </p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">02</span>
+              <h3>番野</h3>
+              <div class="person-role">53歳 / エンタメプロデューサー、SE / 株式会社バンテックス所属</div>
+              <p>
+                三洋パチンコメーカー開発「大海物語のプロデューサー」を経て、AIサービス事業にも関わる。
+                発想力、AI活用、物を量産する業務への理解がある。
+              </p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">03</span>
+              <h3>中村</h3>
+              <div class="person-role">54歳 / 株式会社トプカプ代表</div>
+              <p>
+                防衛庁、ケーブルテレビディレクター、映像ディレクター、不動産業を経験。
+                映像や演出のディレクション、外部折衝、全体のバランス調整に長けている。
+              </p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">04</span>
+              <h3>清田</h3>
+              <div class="person-role">造形デザイナー</div>
+              <p>
+                東北新社のパチンコGARO造形など、多数の造形案件に関わる。
+                立体物、筐体、役物など、エンタメ性のある物理造形に強い。
+              </p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">05</span>
+              <h3>青柳</h3>
+              <div class="person-role">30代 / caeruLab.株式会社代表</div>
+              <p>
+                パチンコ映像開発での映像リーダー。特にオーサリングに強く、遊技機業界でも高い技術力を持つ。
+                ガンダム系などの制作経験がある。
+              </p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-icon" aria-hidden="true"></div>
+            <div>
+              <span class="person-order">06</span>
+              <h3>その他 企画・映像系エンジニア複数名</h3>
+              <div class="person-role">企画 / 映像 / 開発 / 制作進行</div>
+              <p>
+                案件内容に応じて協業する実務メンバー。企画、映像制作、エンジニアリング、制作進行などを補完する。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="samples">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="label">実績サンプル</p>
+            <h2>実績サンプル例</h2>
+          </div>
+          <p class="lead">
+            これまで関わってきた領域を一覧で示しています。
+          </p>
+        </div>
+
+        <div class="samples flat">
+            <article class="sample">
+              <img src="assets/01-character-gundam.jpg" alt="キャラクター造形サンプル">
+              <div class="sample-caption"><b>キャラクター造形</b><span>IP/キャラクター系の立体表現サンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/11-pachinko-eva.jpg" alt="遊技機演出イメージ">
+              <div class="sample-caption"><b>遊技機演出</b><span>高密度な映像・演出構成のサンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/20-pachinko-toaru.jpg" alt="IP遊技機デザイン">
+              <div class="sample-caption"><b>IP遊技機デザイン</b><span>キャラクター演出、筐体表現のサンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/21-pachinko-garo-form.jpg" alt="GARO造形役物イメージ">
+              <div class="sample-caption"><b>造形・役物</b><span>立体造形、迫力表現のサンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/17-product-slot-display.jpg" alt="表示機プロダクトデザイン">
+              <div class="sample-caption"><b>表示機デザイン</b><span>筐体、光、画面演出を含むプロダクト例</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/02-product-crystal-heart.jpg" alt="クリスタルハート型プロダクト">
+              <div class="sample-caption"><b>ジュエリー調プロダクト</b><span>女性向け商品の質感設計</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/03-product-metal-bowl.jpg" alt="金属質感プロダクト">
+              <div class="sample-caption"><b>メタル質感</b><span>素材感、成形、量産視点</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/04-product-jewel-brush.jpg" alt="宝石調ブラシの商品案">
+              <div class="sample-caption"><b>美容雑貨シリーズ</b><span>色、素材、購買導線の設計</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/10-product-jewel-brush-alt.jpg" alt="宝石調ブラシ別カット">
+              <div class="sample-caption"><b>美容雑貨別カット</b><span>商品展開のサンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/05-product-luxury-cane.jpg" alt="高級レストランに似合う車いすの提案">
+              <div class="sample-caption"><b>スマート車いす提案</b><span>利用シーン、デザイン、コピー設計</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/06-product-walker.jpg" alt="歩行支援具のコンセプト">
+              <div class="sample-caption"><b>歩行支援具</b><span>福祉機器のデザイン案</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/08-product-fan-chair.jpg" alt="椅子用ファンのプロダクト">
+              <div class="sample-caption"><b>ファン付き機構</b><span>機能訴求用のプロダクトCG</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/09-product-color-variation.jpg" alt="製品のカラーバリエーション">
+              <div class="sample-caption"><b>カラーバリエーション</b><span>量産前提の商品展開サンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/16-toy-ema-capsule.jpg" alt="ミニ絵馬カプセル商品">
+              <div class="sample-caption"><b>カプセルトイ企画</b><span>縁起物、キャラクター、販促設計</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/19-product-smart-golf.jpg" alt="スマートゴルフカートの提案資料">
+              <div class="sample-caption"><b>スマートゴルフカート</b><span>モビリティ、サービス構想の資料例</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/07-ad-thermal-printer.jpg" alt="小型サーマル印刷機の広告">
+              <div class="sample-caption"><b>小型サーマル印刷機</b><span>親子向け販促ビジュアル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/12-ad-smart-snow.jpg" alt="融雪ロボット広告">
+              <div class="sample-caption"><b>スマホ連動プロダクト広告</b><span>機能説明、画面UI、使用シーンの整理</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/13-space-ceremony.jpg" alt="式場演出の空間イメージ">
+              <div class="sample-caption"><b>式場・空間演出</b><span>床面、壁面、照明を含む体験設計</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/14-entertainment-idol.jpg" alt="アイドル発表会のイメージ">
+              <div class="sample-caption"><b>アイドル発表会</b><span>イベント、IP、タレント発表のイメージ</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/15-space-immersive-stage.jpg" alt="没入型ステージ演出">
+              <div class="sample-caption"><b>没入型ステージ</b><span>プロジェクション、体験空間のサンプル</span></div>
+            </article>
+            <article class="sample">
+              <img src="assets/18-signage-icecream.jpg" alt="店舗サイネージの導入イメージ">
+              <div class="sample-caption"><b>店舗サイネージ</b><span>空間に置く大型プロモーション例</span></div>
+            </article>
+        </div>
+
+        <div class="notice">
+          <p>
+            注記: 掲載画像は経験領域を示すサンプルです。権利者名、メーカー名、案件名などの正式表記は必要に応じて調整します。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">大塚理沙 紹介資料 / 人の紹介・実績サンプル例</div>
+  </footer>
+</body>
+</html>
