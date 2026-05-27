@@ -584,6 +584,52 @@
       background: #e7e5df;
     }
 
+    .sample-preview {
+      display: grid;
+      align-content: center;
+      gap: 9px;
+      min-height: 190px;
+      padding: 22px;
+      color: #fff;
+      background: #263b38;
+    }
+
+    .sample-preview.app-dev {
+      background:
+        linear-gradient(120deg, rgba(21, 43, 39, .96), rgba(41, 95, 84, .74)),
+        linear-gradient(135deg, #13211f, #3e7569);
+    }
+
+    .sample-preview.line-bot {
+      color: #17211d;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, .94), rgba(236, 250, 241, .86)),
+        linear-gradient(135deg, #e9f8ef, #ffffff);
+    }
+
+    .preview-kicker {
+      width: fit-content;
+      padding: 4px 9px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 850;
+      line-height: 1.2;
+      opacity: .86;
+    }
+
+    .sample-preview strong {
+      font-size: 26px;
+      line-height: 1.18;
+    }
+
+    .sample-preview span:last-child {
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.45;
+      opacity: .9;
+    }
+
     .sample.tall img {
       height: 260px;
     }
@@ -921,11 +967,27 @@
             <h2>実績サンプル例</h2>
           </div>
           <p class="lead">
-            これまで関わってきた領域を一覧で示しています。
+            アプリ開発、AI LINE botサービスを含め、これまで関わってきた領域を一覧で示しています。
           </p>
         </div>
 
         <div class="samples flat">
+            <article class="sample">
+              <div class="sample-preview app-dev" role="img" aria-label="簡単QRレジのアプリ開発サンプル">
+                <span class="preview-kicker">iPhone App</span>
+                <strong>簡単QRレジ</strong>
+                <span>QR読み取り / 会計履歴 / App Store公開</span>
+              </div>
+              <div class="sample-caption"><b>アプリ開発</b><span>iPhone向け会計レジアプリの企画、UI、実装、公開サンプル</span></div>
+            </article>
+            <article class="sample">
+              <div class="sample-preview line-bot" role="img" aria-label="AI LINE botサービスのサンプル">
+                <span class="preview-kicker">AI LINE Bot</span>
+                <strong>LINEからSNS投稿</strong>
+                <span>画像送信 / 文面生成 / Instagram投稿支援</span>
+              </div>
+              <div class="sample-caption"><b>AI LINE botサービス</b><span>LINE送信からSNS投稿までを支援するAIサービスのサンプル</span></div>
+            </article>
             <article class="sample">
               <img src="assets/01-character-gundam.jpg" alt="キャラクター造形サンプル">
               <div class="sample-caption"><b>キャラクター造形</b><span>IP/キャラクター系の立体表現サンプル</span></div>
