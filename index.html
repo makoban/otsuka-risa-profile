@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:,">
   <title>大塚理沙 紹介資料</title>
+  <meta name="description" content="大塚理沙と協業メンバーの紹介資料。遊技機開発、AI関連事業、ものづくり事業など、実績と今後広げられる事業領域を整理しています。">
   <style>
     :root {
       --ink: #222222;
@@ -144,7 +145,7 @@
     h1 {
       max-width: 760px;
       margin-bottom: 16px;
-      font-size: clamp(25px, 3.6vw, 34px);
+      font-size: 34px;
       line-height: 1.25;
       font-weight: 700;
     }
@@ -153,7 +154,7 @@
       max-width: 760px;
       margin-bottom: 0;
       color: #3f4145;
-      font-size: clamp(15px, 1.8vw, 17px);
+      font-size: 17px;
       font-weight: 500;
     }
 
@@ -179,6 +180,7 @@
 
     .section {
       padding: clamp(44px, 7vw, 78px) 0;
+      scroll-margin-top: 82px;
     }
 
     .section + .section {
@@ -195,7 +197,7 @@
 
     h2 {
       margin-bottom: 0;
-      font-size: clamp(24px, 3.4vw, 32px);
+      font-size: 32px;
       line-height: 1.25;
       font-weight: 720;
     }
@@ -237,7 +239,7 @@
 
     .profile-name {
       margin-bottom: 12px;
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: 44px;
       line-height: 1.15;
       font-weight: 850;
     }
@@ -647,6 +649,126 @@
       font-weight: 650;
     }
 
+    .growth-visual {
+      margin: 0 0 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .growth-visual img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .growth-visual figcaption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+      line-height: 1.6;
+    }
+
+    .growth-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .growth-card {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      min-height: 100%;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .growth-card h3 {
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .growth-card p {
+      margin-bottom: 0;
+      color: #42454a;
+      font-size: 14px;
+      font-weight: 580;
+    }
+
+    .scale-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .scale-tags span {
+      padding: 5px 8px;
+      border: 1px solid #d9ccb1;
+      border-radius: 6px;
+      color: #5f5036;
+      background: #fff9ec;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .growth-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .growth-list li {
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 620;
+      line-height: 1.6;
+    }
+
+    .growth-list b {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .synergy-band {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid #cbd8d2;
+      border-radius: 8px;
+      background: #f0f5f2;
+    }
+
+    .synergy-band b {
+      display: block;
+      color: var(--green);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .synergy-band p {
+      margin-bottom: 0;
+      color: #3f4a43;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
     .footer {
       padding: 26px 0 36px;
       border-top: 1px solid var(--line);
@@ -672,8 +794,13 @@
 
       .samples,
       .skills,
-      .people-grid {
+      .people-grid,
+      .growth-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .synergy-band {
+        grid-template-columns: 1fr;
       }
 
       .profile-image img {
@@ -690,6 +817,22 @@
         justify-content: flex-start;
       }
 
+      h1 {
+        font-size: 25px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .intro-copy {
+        font-size: 15px;
+      }
+
+      .profile-name {
+        font-size: 30px;
+      }
+
       .profile-image img,
       .sample img,
       .sample.tall img,
@@ -700,7 +843,8 @@
 
       .samples,
       .skills,
-      .people-grid {
+      .people-grid,
+      .growth-grid {
         grid-template-columns: 1fr;
       }
 
@@ -813,6 +957,7 @@
       <nav class="nav" aria-label="ページ内メニュー">
         <a href="#people">人の紹介</a>
         <a href="#samples">実績サンプル例</a>
+        <a href="#growth">広げられる領域</a>
         <button class="print-button" type="button" onclick="window.print()">印刷</button>
       </nav>
     </div>
@@ -1086,10 +1231,88 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="growth">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="label">拡張領域</p>
+            <h2>経験と接点から広げられる3つの事業領域</h2>
+          </div>
+          <p class="lead">
+            企画、映像・演出、AI実装、量産ネットワークを組み合わせることで、単発の制作受託だけでなく、開発、サービス化、製造まで見据えた案件に発展させられる余地があります。
+          </p>
+        </div>
+
+        <figure class="growth-visual">
+          <img src="assets/34-business-growth-map.jpg" alt="遊技機開発、AIサービス、ものづくり事業をつなぐ事業拡張イメージ" loading="lazy" decoding="async">
+          <figcaption>
+            3つの領域を別々に扱うのではなく、企画力、技術、制作現場、製造・商流をつなげて、案件ごとに最適な形へ組み立てるイメージです。
+          </figcaption>
+        </figure>
+
+        <div class="growth-grid">
+          <article class="growth-card">
+            <h3>遊技機開発・映像演出</h3>
+            <div class="scale-tags">
+              <span>開発 1億〜5億円規模</span>
+              <span>製造 5億円規模も視野</span>
+            </div>
+            <p>
+              映像・演出・筐体・役物の理解を持つメンバーがいるため、企画段階から開発、金型、製造までの全体像を見て提案できます。
+            </p>
+            <ul class="growth-list">
+              <li><b>実績値</b>開発領域では3名で約3億円規模、金型・製造領域では約2.5億円規模の実績があります。</li>
+              <li><b>市場感</b>遊技機映像は1案件あたり1億〜5億円規模の開発費になることがあり、映像人材の流動で受け手側に機会が出やすい領域です。</li>
+              <li><b>伸ばし方</b>映像会社、造形、量産先をつなぎ、企画提案から開発実務までをまとめて案件化します。</li>
+            </ul>
+          </article>
+
+          <article class="growth-card">
+            <h3>AI関連事業・SaaS化</h3>
+            <div class="scale-tags">
+              <span>半年で約10サービス</span>
+              <span>現状 数百万円単位</span>
+            </div>
+            <p>
+              AIを使った小規模開発は、試作から公開までの速度が速く、クライアントの顧客接点や広告力と噛み合うと伸ばしやすい領域です。
+            </p>
+            <ul class="growth-list">
+              <li><b>実績値</b>開始から半年程度で、LINE連携、SNS投稿支援、業務支援など約10件のサービスを試作・公開しています。</li>
+              <li><b>市場感</b>大規模な開発体制だけが有利な時代ではなく、AI活用により数名規模でも速度とコスト面で戦いやすくなっています。</li>
+              <li><b>伸ばし方</b>画期性だけでなく、写真をLINEに送るだけでSNS投稿を準備するような、少し便利で使い続けやすいサービスを狙います。</li>
+            </ul>
+          </article>
+
+          <article class="growth-card">
+            <h3>ものづくり・量産企画</h3>
+            <div class="scale-tags">
+              <span>数百万円〜数十億円規模</span>
+              <span>国内量産ネットワーク</span>
+            </div>
+            <p>
+              商品企画、デザイン、樹脂系を含む量産、商社との接点を組み合わせ、企画書で終わらせず製造まで見据えた提案が可能です。
+            </p>
+            <ul class="growth-list">
+              <li><b>実績値</b>遊技機関連で培った量産業者、成形、造形、商流への理解を、一般商品の開発にも転用できます。</li>
+              <li><b>市場感</b>価格だけでなく品質や国内製造を重視する流れがあり、良い企画と相手先が合えば大きな案件化も狙えます。</li>
+              <li><b>伸ばし方</b>デザイン、試作、見積、量産先選定、販売導線を一体で設計し、資金力や看板を持つ企業との共同展開につなげます。</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="synergy-band">
+          <b>組み合わせることで強くなる領域</b>
+          <p>
+            個人ごとに散っている企画力、技術、業界接点、製造ネットワークを一つの事業提案にまとめることで、遊技機・AI・ものづくりのいずれか単体では届きにくい規模の案件にも近づけます。特に、知名度、販路、広告費、資金力を持つ企業と組む場合は、試作から市場投入までの距離を縮めやすくなります。
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container">大塚理沙 紹介資料 / 人の紹介・実績サンプル例</div>
+    <div class="container">大塚理沙 紹介資料 / 人の紹介・実績サンプル例・広げられる事業領域</div>
   </footer>
 </body>
 </html>
